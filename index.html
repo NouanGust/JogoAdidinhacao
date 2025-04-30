@@ -7,17 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <header>
+        <h1>Jogo de Adivinhação de Palavras</h1>
+    </header>
+    
     <div class="container">
-        <h1>Adivinhe a Palavra Secreta</h1>
+        <h2>Tente Advinhar</h2>
+        <p id="paragrafo_dicas" onmouseenter="mostrar_dica()">Passe o Mouse para ver a primeira dica!</p>
         <div class="input_container">
             <input type="text" id="txt_input" placeholder="Digite Aqui..." >
-            <button class="btn" onclick="adivinhar()">Advinhar</button>
+            <button class="button-7" onclick="adivinhar()">Advinhar</button>
         </div>
         <div class="resultado" id="resultado"></div>
-        <p id="paragrafo_dicas"></p>
         <p id="paragrafo_tentativas"></p> 
     </div>
     
+    <footer>
+        <p>Desenvolvido por <a href="https://github.com/NouanGust" target="_blank">Nohan Gustavo &copy;</a>   </p>
+    </footer>
 
    <script src="script.js"></script> 
 </body>

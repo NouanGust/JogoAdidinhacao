@@ -38,3 +38,7 @@ function adivinhar(){
 
     }       
 }
+
+function mostrar_dica() {
+    paragrafo_dicas.textContent = `Dica: ${dicas[0]}`
+}
