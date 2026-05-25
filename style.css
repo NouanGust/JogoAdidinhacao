@@ -1,92 +1,167 @@
-body {
-    font-family: sans-serif;
-    font-size: 18px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    min-height: 100vh;
+    background-color: #1a1035;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    box-sizing: border-box;
-    background-color: #39AFE6;
+    color: #e8e2f8;
 }
 
+/* ── Header ── */
 header {
-    background-color:#40CDE3;
-    padding: 20px;
-    height: 150px;
-    color: #000;
-    font-weight: bold;
-    
-    h1 {
-        text-align: center;
-        font-size: 50px;
-    }
+    background-color: #231548;
+    border-bottom: 1px solid #3a2570;
+    padding: 24px 20px;
+    text-align: center;
 }
 
+header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #c8b8f8;
+    letter-spacing: 0.5px;
+}
+
+/* ── Container principal ── */
 .container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 500px;
-
-    h2 {
-        font-size: 55px;
-        color: #242221;
-    }
-
-    .input_container {
-        display: flex;
-        height: 150px;
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        
-        input {
-            width: 300px;
-            height: 50px;
-            border-radius: 20px;
-            border: 1px solid #000;
-            padding: 10px 10px 0 10px;
-            box-shadow: 5px 5px 4px #3130304d;
-        }
-
-        input::placeholder {
-            color: #000;
-            font-size: 16px;
-
-        }
-
-        
-        button {
-            border: none;
-            text-decoration: none;
-            height: 60px;
-            width: 100px;
-            box-shadow: 5px 5px 4px #3130304d;
-            border-radius: 10px;
-            background-color: #E38840;
-            color: #000;
-            font-size: 16px;
-            font-weight: bold;
-        }
-
-    }
+    gap: 20px;
+    padding: 40px 20px 100px;
 }
 
-#paragrafo_dica {
-    display: inline-block;
+.container h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #e8e2f8;
 }
 
+/* ── Caixa de dicas ── */
+#paragrafo_dicas {
+    background: #2e1b5e;
+    border: 1px dashed #6c4bc4;
+    border-radius: 12px;
+    padding: 14px 24px;
+    font-size: 15px;
+    color: #b09ee0;
+    cursor: default;
+    text-align: center;
+    transition: background 0.25s, color 0.25s;
+    max-width: 420px;
+    width: 100%;
+}
+
+#paragrafo_dicas:hover {
+    background: #3b2275;
+    color: #d4c4f8;
+}
+
+/* ── Input + botão ── */
+.input_container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.input_container input {
+    flex: 1;
+    height: 50px;
+    background: #1a1035;
+    border: 1px solid #3a2570;
+    border-radius: 10px;
+    padding: 0 16px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #e8e2f8;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input_container input::placeholder {
+    color: #6c5fa0;
+}
+
+.input_container input:focus {
+    border-color: #7c5df6;
+}
+
+.input_container button {
+    height: 50px;
+    padding: 0 24px;
+    background: #7c5df6;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    white-space: nowrap;
+}
+
+.input_container button:hover {
+    background: #6a4de0;
+}
+
+.input_container button:active {
+    transform: scale(0.97);
+}
+
+/* ── Resultado e tentativas ── */
+.resultado {
+    font-size: 20px;
+    font-weight: 500;
+    color: #a78bfa;
+    min-height: 30px;
+    text-align: center;
+}
+
+#paragrafo_tentativas {
+    font-size: 13px;
+    color: #6c5fa0;
+    text-align: center;
+}
+
+/* ── Footer ── */
 footer {
-    background-color: #40CDE3;
-    height: 70px;
+    background-color: #231548;
+    border-top: 1px solid #3a2570;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    p {
-        text-align: center;
-    }
 }
 
+footer p {
+    font-size: 13px;
+    color: #6c5fa0;
+}
+
+footer a {
+    color: #9b7ff0;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+footer a:hover {
+    color: #c4aaff;
+}
